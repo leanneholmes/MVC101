@@ -1,0 +1,15 @@
+@model string[]
+@{
+    ViewData["Title"] = "Bogus page";
+    var date = (System.DateTime) ViewBag.Date;
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>This is the first ASP.NET page authored by @ViewData["author"] on @date.ToShortDateString()</p>
+
+    <ul>
+    @foreach (var item in Model) 
+    {
+        <li>@item</li>
+    }
+    </ul>
